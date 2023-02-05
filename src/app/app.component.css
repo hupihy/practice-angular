@@ -1,0 +1,36 @@
+#todo-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#title-name{
+  color: #FFF;
+  font-size:40px;
+}
+#input-container{
+  width: 400px;
+  height: 50px;
+  background-color: #FFF;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+#todo-input{
+  font-size: 20px;
+  border: none;
+  outline: none;
+}
+#add-new-todo-button{
+  width: 50px;
+  height: 30px;
+  background-color: #FFFFFF;
+  margin-top: 10px;
+  margin-right: 5px ;
+  font-size: 12px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+#add-new-todo-button:hover{
+  background-color: lightgray;
+}

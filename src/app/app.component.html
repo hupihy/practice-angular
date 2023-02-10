@@ -1,8 +1,11 @@
-<div id="todo-container">
-  <h1 id="title-name">Angular todo</h1>
-  <span id="input-container">
-  <input type="text" placeholder="Enter todo" id="todo-input">
-    <button id="add-new-todo-button">Create</button>
-  </span>
-  <app-todo></app-todo>
+<h1>angular</h1>
+<div class="container">
+  <app-post-form></app-post-form>
+  <hr />
+  <app-post
+  *ngFor="let post of posts"
+  [post]="post"
+  ></app-post>
+
 </div>
+

@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { PostFormComponent } from './post-form/post-form.component';
-import { PostComponent } from './post/post.component';
+import { TodoFormComponent } from './todo-form/todo-form.component';
+import { TodoComponent } from './todo/todo.component';
 
 
 
@@ -11,8 +11,8 @@ import { PostComponent } from './post/post.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PostFormComponent,
-    PostComponent,
+    TodoFormComponent,
+    TodoComponent,
 
   ],
   imports: [

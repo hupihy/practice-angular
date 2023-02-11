@@ -1,0 +1,29 @@
+#todo-container{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid white;
+  min-width: 300px;
+  padding: 10px;
+  height: 20px;
+  border-radius: 5px  ;
+  margin: 5px;
+}
+#finish-todo-button{
+  transition: .5s;
+  margin-right: 5px;
+  cursor: pointer;
+}
+#finish-todo-button:hover{
+  background-color: #44ea2e;
+}
+#delete-todo-button{
+  transition: .5s;
+  cursor: pointer;
+}
+#delete-todo-button:hover{
+  background-color: #ea2e2e;
+}
+#task{
+  color: white;
+}
+

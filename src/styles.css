@@ -1,1 +1,16 @@
+body{
+  display: flex;
+  justify-content: center;
+  background-color: #78677e;
+}
+button{
+  border:  none;
+  border-radius: 5px;
+  background-color: #fff;
+}
+input {
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
 
+}

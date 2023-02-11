@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   border: 1px solid white;
-  min-width: 300px;
+  min-width: 400px;
   padding: 10px;
   height: 20px;
   border-radius: 5px  ;
@@ -12,6 +12,7 @@
   transition: .5s;
   margin-right: 5px;
   cursor: pointer;
+
 }
 #finish-todo-button:hover{
   background-color: #44ea2e;
@@ -26,4 +27,11 @@
 #task{
   color: white;
 }
-
+.active{
+  opacity:1;
+  text-decoration: none;
+}
+.finished{
+  text-decoration: line-through;
+  opacity: 0.5;
+}

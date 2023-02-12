@@ -9,9 +9,11 @@ import {task} from "../main-content/main-content.component";
 export class TodoFormComponent {
 
   @Output() onAdd:EventEmitter<task> = new EventEmitter<task>()
+  @Output() onFilter:EventEmitter<string> = new EventEmitter<string>()
 
   newTask:string
-  addNewTask() {
+
+  addNewTask():void{
     if (this.newTask.trim()) {
       const task: task = {
         taskText: this.newTask,
@@ -21,4 +23,9 @@ export class TodoFormComponent {
       this.newTask = ''
     }
   }
+
+    sectionSelection(select:string):void {
+    this.onFilter.emit(select)
+  }
 }
+

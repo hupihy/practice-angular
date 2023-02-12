@@ -17,3 +17,6 @@
   cursor: pointer;
 }
 
+#todo-status{
+  margin-right: 10px;
+}

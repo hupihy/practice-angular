@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 export interface task {
   taskText :string
   done:boolean
@@ -13,6 +14,16 @@ export interface task {
 
 export class MainContentComponent {
   twists:boolean
+  select:string='active'
+  allTask:task[]=[{taskText:'write in inputForm your task',done:false,},
+    {taskText:'click in button or enter to create new task ',done:false,},
+    {taskText:' just do it!!!!!!!',done:false,},]
+  tasks:task[]= this.allTask
+
+  renderingSelect(select:string):void {
+    this.tasks= this.allTask.filter(item => select === 'finished' ?item.done: !item.done )
+    this.select = select
+  }
   unTwists(task:task):any{
     this.twists =false
     for(let twists of this.tasks){
@@ -21,29 +32,29 @@ export class MainContentComponent {
       }
     }
   }
-  tasks:task[]= [
-    {taskText:'write in inputForm your task',done:false,},
-    {taskText:'click in button or enter to create new task ',done:false,},
-    {taskText:' just do it!!!!!!!',done:false,},
-  ]
 
   addNewTask(task:task):void{
   this.unTwists(task)
     if(!this.twists) {
-      this.tasks.unshift(task)
+      this.allTask.unshift(task)
+      this.renderingSelect(this.select)
     }
   }
+
   addFinishedTask(task:string){
     const finishedTask: task = {
       taskText: task,
       done: true,
     }
     this.tasks.push(finishedTask)
+
   }
+
   finishTask(task:task):void{
     task.done =!task.done
     this.addFinishedTask(task.taskText)
     this.deleteTask(task)
+    this.renderingSelect(this.select)
   }
 
   deleteTask(task:task):void{

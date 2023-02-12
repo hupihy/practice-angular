@@ -1,12 +1,14 @@
 <div id="todo-container">
       <span id="task"
       [ngClass]="{
-       active:!task.status,
-       finished:task.status
+       active:!task.done,
+       finished:task.done
       }"
       >{{task.taskText}}</span>
     <span>
-      <button id="finish-todo-button" (click)="finishedTask(task)">{{buttonText}}</button>
-     <button  id="delete-todo-button" (click)="deleteTask(task)">delete</button>
+      <button id="finish-todo-button" (click)="finishedTask(task)" *ngIf="!this.task.done">Finish</button>
+     <button  id="delete-todo-button" (click)="deleteTask(task)">Delete</button>
     </span>
 </div>
+
+

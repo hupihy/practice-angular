@@ -1,15 +1,2 @@
-<h1>Angular todo</h1>
-<app-todo-form
-(onAdd)="addNewTask($event)"
-
-></app-todo-form>
-<hr />
-<app-todo
-*ngFor="let task of Tasks"
-[task]="task"
-(onFinish)="FinishTask($event)"
-(onDelete)="DeleteTask($event)"
-
-></app-todo>
-
+<app-main-content></app-main-content>
 

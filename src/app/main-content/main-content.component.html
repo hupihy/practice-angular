@@ -1,0 +1,15 @@
+<h1>ANGULAR TODO</h1>
+<app-todo-form
+  (onAdd)="addNewTask($event)"
+
+></app-todo-form>
+<hr />
+<app-todo
+  *ngFor="let task of tasks"
+  [task]="task"
+  (onFinish)="finishTask($event)"
+  (onDelete)="deleteTask($event)"
+
+></app-todo>
+
+

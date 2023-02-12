@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { TodoFormComponent } from './todo-form/todo-form.component';
 import { TodoComponent } from './todo/todo.component';
 import {FormsModule} from "@angular/forms";
+import { MainContentComponent } from './main-content/main-content.component';
 
 
 
@@ -14,6 +15,7 @@ import {FormsModule} from "@angular/forms";
     AppComponent,
     TodoFormComponent,
     TodoComponent,
+    MainContentComponent,
 
   ],
   imports: [

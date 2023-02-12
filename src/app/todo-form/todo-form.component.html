@@ -1,17 +1,12 @@
 <div id="todo-form-container">
-  <select name="todo-status" id="todo-status">
-    <option value="active">All</option>
-    <option value="finished">Finished</option>
-    <option value="deleted">Active</option>
-  </select>
   <span>
-  <input type="text"
-         id="new-task-input"
-         placeholder="What's want todo...?"
-         maxlength="15"
-          [(ngModel)]="newTask"
-         (keyup.enter)="addNewTask()"
-  >
-  <button id="create-new-task-button" (click)="addNewTask()">Create</button>
+    <input type="text"
+           id="new-task-input"
+           placeholder="What's want todo...?"
+           maxlength="25"
+           [(ngModel)]="newTask"
+           (keyup.enter)="addNewTask()">
+    <button id="create-new-task-button" (click)="addNewTask()">Create</button>
   </span>
 </div>
+

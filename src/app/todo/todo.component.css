@@ -1,37 +1,26 @@
-#todo-container{
+.todo-container{
   display: flex;
-  justify-content: space-between;
-  border: 1px solid white;
-  min-width: 400px;
-  padding: 10px;
-  height: 20px;
-  border-radius: 5px  ;
+  justify-content: space-around;
+  width: 600px;
+}
+.task-text-container{
+  margin-top: 10px;
+  margin-right: 40px;
+}
+.task-button-container{
+  margin-left:40px ;
+}
+.finished-task-button{
   margin: 5px;
+  border-radius: 20px;
+  border: none;
+  height: 30px;
+  width: 60px;
 }
-#finish-todo-button{
-  transition: .5s;
-  margin-right: 5px;
-  cursor: pointer;
-
-}
-#finish-todo-button:hover{
-  background-color: #44ea2e;
-}
-#delete-todo-button{
-  transition: .5s;
-  cursor: pointer;
-}
-#delete-todo-button:hover{
-  background-color: #ea2e2e;
-}
-#task{
-  color: white;
-}
-.active{
-  opacity:1;
-  text-decoration: none;
-}
-.finished{
-  text-decoration: line-through;
-  opacity: 0.5;
+.delete-task-button{
+  margin: 5px;
+  border-radius: 20px;
+  border: none;
+  height: 30px;
+  width: 60px;
 }

@@ -1,5 +1,5 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {task} from "../main-content/main-content.component";
+import {Component} from '@angular/core';
+
 
 @Component({
   selector: 'app-todo',
@@ -8,15 +8,5 @@ import {task} from "../main-content/main-content.component";
 })
 
 export class TodoComponent {
-  @Output()  onFinish:EventEmitter<task> = new EventEmitter<task>()
-  @Output() onDelete:EventEmitter<task> = new EventEmitter<task>()
-  @Input()  task:task
 
-  finishedTask(task:task) {
-    this.onFinish.emit(task)
-
-  }
-  deleteTask(task:task){
-   this.onDelete.emit(task)
-  }
 }

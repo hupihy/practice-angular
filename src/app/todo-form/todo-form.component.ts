@@ -1,5 +1,5 @@
-import {Component, EventEmitter, Output} from '@angular/core';
-import {task} from "../main-content/main-content.component";
+import {Component} from '@angular/core';
+
 
 @Component({
   selector: 'app-todo-form',
@@ -8,17 +8,4 @@ import {task} from "../main-content/main-content.component";
 })
 export class TodoFormComponent {
 
-  @Output() onAdd:EventEmitter<task> = new EventEmitter<task>()
-
-  newTask:string
-  addNewTask() {
-    if (this.newTask.trim()) {
-      const task: task = {
-        taskText: this.newTask,
-        done: false,
-      }
-      this.onAdd.emit(task)
-      this.newTask = ''
-    }
-  }
 }

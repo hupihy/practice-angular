@@ -1,16 +1,19 @@
-body{
-  display: flex;
-  justify-content: center;
-  background-color: #78677e;
+body {
+  background-color: #987dfe;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
-button{
-  border:  none;
-  border-radius: 5px;
-  background-color: #fff;
+::-webkit-scrollbar{
+  border: 1px solid white;
+  background-color: #ffffff;
+  width: 12px;
+
 }
-input {
-  outline: none;
-  border: 1px solid black;
-  border-radius: 5px;
+::-webkit-scrollbar-thumb{
+  background-color: #987dfe;
+  border:2px solid #3f3073;
+  border-radius: 4px;
 
 }

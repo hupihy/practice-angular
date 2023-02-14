@@ -1,3 +1,133 @@
-h1{
-  text-align: center;
+.content{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-right: 150px
+}
+.main-container{
+  border: 6px solid white;
+  background-color: #987dfe;
+  border-radius: 20px;
+  height: 500px;
+  width: 900px;
+}
+.main-content{
+  display: flex;
+}
+/*user style*/
+
+.user-profile{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 500px;
+  background-color: #fff;
+}
+.user-info{
+  display: flex;
+  width: 180px;
+  height: 60px;
+  background-color: #fff;
+  margin: 10px;
+}
+.user-ico{
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+.user-name{
+  margin: 10px;
+}
+hr{
+  width: 170px;
+}
+.user-nav{
+  align-self: center;
+  margin-top:10px;
+}
+.today-task{
+  border: none;
+  outline: none;
+  transition: .3s;
+  border-radius: 20px;
+  height: 30px;
+  width: 100px;
+}
+.today-task:hover{
+  background-color: #fc99ae;
+  transition: .3s;
+}
+
+
+/* task style*/
+.task-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 700px;
+  max-height: 500px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+.title{
+  align-self: start;
+  margin: 30px;
+  font-size: 30px;
+  color: white;
+}
+.task-form{
+  display: flex;
+  min-height: 50px;
+  background-color: white;
+  border-radius: 20px;
+}
+.new-task-input{
+  align-self: center;
+  width: 600px;
+}
+.tasks{
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  width: 500px;
+  height: 600px;
+  margin: 20px 0 10px 0;
+
+}
+.task{
+  display: flex;
+  border-radius: 20px;
+  background-color: #ffffff;
+  width: 500px;
+  min-height: 40px;
+  align-self: center;
+  margin: 10px 0 10px 0;
+  padding-left: 40px;
+}
+
+/* background style*/
+.background{
+  position: absolute;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+.circle-container{
+  align-self: flex-end;
+  width: 300px;
+  height: 300px;
+  margin-top: 100px;
+  margin-left: -100px;
+}
+.background-circle{
+  border-top: 2px solid #ab495f;
+  border-right: 2px solid #ab495f;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #fc99ae;
+
+
 }

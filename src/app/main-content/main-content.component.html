@@ -1,15 +1,52 @@
-<h1>ANGULAR TODO</h1>
-<app-todo-form
-  (onAdd)="addNewTask($event)"
+<div class="background">
+  <div class="circle-container" >
+    <div class="background-circle"></div>
+  </div>
+</div>
+<div class="content">
+  <div class="main-container">
+      <div class="main-content">
+        <div class="user-profile">
+         <div class="user-info"> <div class="user-ico">
+            <img class="user-ico"  src="/assets/default-ico.jpg" alt="undefined" >
+          </div>
+        <div class="user-name">
+            <span class="user-first-name"> Dima</span><br>
+            <span class="user-last-name"> Smirnov</span>
+        </div>
+         </div>
+          <hr/>
+          <div class="user-nav">
+            <div class=""></div>
+            <div class="user-task-type-menu">
+              <button class="today-task">Today tasks</button>
+            </div>
 
-></app-todo-form>
-<hr />
-<app-todo
-  *ngFor="let task of tasks"
-  [task]="task"
-  (onFinish)="finishTask($event)"
-  (onDelete)="deleteTask($event)"
+          </div>
 
-></app-todo>
+        </div>
+          <div class="task-container">
+
+            <div class="title">Today create your best dreams</div>
+
+           <div class="task-form"> <app-todo-form class="new-task-input"></app-todo-form></div>
+
+           <div class="tasks">
+             <app-todo class="task" ></app-todo>
+             <app-todo class="task" ></app-todo>
+             <app-todo class="task" ></app-todo>
+             <app-todo class="task" ></app-todo>
+             <app-todo class="task" ></app-todo>
+             <app-todo class="task" ></app-todo>
+             <app-todo class="task" ></app-todo>
+             <app-todo class="task" ></app-todo>
+             <app-todo class="task" ></app-todo>
+             <app-todo class="task" ></app-todo>
+           </div>
+          </div>
+    </div>
+  </div>
+</div>
+
 
 

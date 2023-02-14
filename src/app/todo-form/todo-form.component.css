@@ -1,19 +1,9 @@
-#todo-form-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.new-task-container{
 }
-#todo-status{
-  outline: none;
-  border: 1px solid gray;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-#new-task-input{
+.new-task-input{
+  width: 400px;
   border: none;
-  background-color: #fff;
-  margin-right: 20px;
-  cursor: pointer;
-}
+  outline: none;
+ margin-left: 30px;
 
+}

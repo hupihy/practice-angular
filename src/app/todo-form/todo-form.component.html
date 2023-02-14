@@ -1,12 +1,6 @@
-<div id="todo-form-container">
-  <span>
-    <input type="text"
-           id="new-task-input"
-           placeholder="What's want todo...?"
-           maxlength="25"
-           [(ngModel)]="newTask"
-           (keyup.enter)="addNewTask()">
-    <button id="create-new-task-button" (click)="addNewTask()">Create</button>
-  </span>
+<div>
+  <div class="new-task-container">
+    <input class="new-task-input" type="text" placeholder="What's your next task?"  >
+  </div>
 </div>
 

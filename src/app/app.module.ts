@@ -8,6 +8,8 @@ import {FormsModule} from "@angular/forms";
 import { MainContentComponent } from './main-content/main-content.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgOptimizedImage} from "@angular/common";
+import { LoginUserComponent } from './login-user/login-user.component';
+import { UserSettingComponent } from './user-setting/user-setting.component';
 
 
 
@@ -19,10 +21,11 @@ import {NgOptimizedImage} from "@angular/common";
     TodoFormComponent,
     TodoComponent,
     MainContentComponent,
+    LoginUserComponent,
+    UserSettingComponent,
 
   ],
   imports: [
-
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,

@@ -16,11 +16,10 @@
 .main-content{
   display: flex;
 }
-/*user style*/
-
 .user-profile{
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   width: 200px;
   height: 500px;
   background-color: #fff;
@@ -45,7 +44,11 @@ hr{
 }
 .user-nav{
   align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-top:10px;
+  height: 440px;
 }
 .today-task{
   border: none;
@@ -54,11 +57,31 @@ hr{
   border-radius: 20px;
   height: 30px;
   width: 100px;
+  cursor: pointer;
 }
 .today-task:hover{
   background-color: #fc99ae;
   transition: .3s;
+  color: white;
 }
+.user-setting{
+  margin-bottom: 20px;
+}
+.user-setting-button{
+  border-radius: 20px;
+  border: none;
+  height: 30px;
+  width: 100px;
+  background-color: lightgray;
+  transition: .3s;
+  cursor: pointer;
+}
+.user-setting-button:hover{
+  background-color: #987dfe;
+  color: white;
+  transition: .3s;
+}
+
 
 
 /* task style*/
@@ -106,7 +129,6 @@ hr{
   margin: 10px 0 10px 0;
   padding-left: 40px;
 }
-
 /* background style*/
 .background{
   position: absolute;
@@ -128,6 +150,4 @@ hr{
   height: 300px;
   border-radius: 50%;
   background-color: #fc99ae;
-
-
 }

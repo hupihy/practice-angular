@@ -1,49 +1,42 @@
-<div class="background">
-  <div class="circle-container" >
-    <div class="background-circle"></div>
+<app-login-user class="setting-container" (onFinishSingUp)="finishSignUp($event)" *ngIf="!loginStatus"></app-login-user>
+<app-user-setting *ngIf="displayUserSetting" (onFinishSetting)="finishSetting($event)"></app-user-setting>
+<div *ngIf="loginStatus && !displayUserSetting">
+  <div class="background">
+    <div class="circle-container" >
+      <div class="background-circle"></div>
+    </div>
   </div>
-</div>
-<div class="content">
-  <div class="main-container">
-      <div class="main-content">
-        <div class="user-profile">
-         <div class="user-info"> <div class="user-ico">
-            <img class="user-ico"  src="/assets/default-ico.jpg" alt="undefined" >
-          </div>
-        <div class="user-name">
-            <span class="user-first-name"> Dima</span><br>
-            <span class="user-last-name"> Smirnov</span>
-        </div>
-         </div>
-          <hr/>
-          <div class="user-nav">
-            <div class=""></div>
-            <div class="user-task-type-menu">
-              <button class="today-task">Today tasks</button>
+  <div class="content ">
+    <div class="main-container">
+        <div class="main-content">
+          <div class="user-profile">
+           <div class="user-info"> <div class="user-ico">
+              <img class="user-ico"  src="/assets/default-ico.jpg" alt="undefined" >
             </div>
-
+          <div class="user-name">
+              <span class="user-first-name">{{userFirstName | titlecase}}</span>
+            <br>
+              <span class="user-last-name">{{userSecondName | titlecase}}</span>
           </div>
-
-        </div>
-          <div class="task-container">
-
-            <div class="title">Today create your best dreams</div>
-
-           <div class="task-form"> <app-todo-form class="new-task-input"></app-todo-form></div>
-
-           <div class="tasks">
-             <app-todo class="task" ></app-todo>
-             <app-todo class="task" ></app-todo>
-             <app-todo class="task" ></app-todo>
-             <app-todo class="task" ></app-todo>
-             <app-todo class="task" ></app-todo>
-             <app-todo class="task" ></app-todo>
-             <app-todo class="task" ></app-todo>
-             <app-todo class="task" ></app-todo>
-             <app-todo class="task" ></app-todo>
-             <app-todo class="task" ></app-todo>
            </div>
+            <hr/>
+            <div class="user-nav">
+              <div class="user-task-type-menu">
+                <button class="today-task">Active Task</button>
+              </div>
+              <div class="user-setting">
+                <button class="user-setting-button" (click)="displayUserSetting=!displayUserSetting">Setting</button>
+              </div>
+            </div>
           </div>
+            <div class="task-container">
+              <div class="title">Today create your best dreams</div>
+             <div class="task-form"> <app-todo-form class="new-task-input"></app-todo-form></div>
+             <div class="tasks">
+               <app-todo class="task"></app-todo>
+             </div>
+            </div>
+      </div>
     </div>
   </div>
 </div>

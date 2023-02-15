@@ -19,7 +19,6 @@ export class LoginUserComponent {
     if(this.userFirstNameInput.trim() && this.userSecondNameInput.trim()){
       this.userInfo.push(this.userFirstNameInput,this.userSecondNameInput)
       this.onFinishSingUp.emit(this.userInfo)
-      console.log(this.userInfo)
     }
   }
 }

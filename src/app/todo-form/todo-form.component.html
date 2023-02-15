@@ -1,6 +1,12 @@
 <div>
   <div class="new-task-container">
-    <input class="new-task-input" type="text" placeholder="What's your next task?"  >
+    <input class="new-task-input"
+           type="text"
+           placeholder="What's your next task?"
+           [(ngModel)]="newTaskInput"
+           (keyup.enter)="addNewTask()"
+           maxlength="25"
+    >
   </div>
 </div>
 

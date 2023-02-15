@@ -16,6 +16,13 @@
   border: none;
   height: 30px;
   width: 60px;
+  cursor: pointer;
+  transition: .3s;
+}
+.finished-task-button:hover{
+  background-color: #987dfe;
+  color: white;
+  transition: .3s;
 }
 .delete-task-button{
   margin: 5px;
@@ -23,4 +30,15 @@
   border: none;
   height: 30px;
   width: 60px;
+  cursor: pointer;
+  transition: .3s;
 }
+.delete-task-button:hover{
+  background-color: #ab495f;
+  color: white;
+  transition: .3s;
+}
+.status-finished{
+  text-decoration: line-through;
+}
+

@@ -11,7 +11,6 @@ export class UserSettingComponent {
 
   userFirstNameInput:string
   userSecondNameInput:string
-
   userInfo:string[]=[]
 
   finishSetting():void{

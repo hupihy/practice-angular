@@ -1,11 +1,16 @@
 <div class="todo-container">
   <div class="task-text-container">
-      <span class="task">доделать ui</span>
+      <span
+        class="task"
+        [ngClass]="{
+          'status-finished':task.done
+        }"
+      >{{task.taskText}}</span>
   </div>
   <div class="task-button-container">
     <span>
-      <button class="finished-task-button">Finish</button>
-     <button  class="delete-task-button">Delete</button>
+      <button class="finished-task-button" (click)="finishTask()">Finish</button>
+     <button  class="delete-task-button" (click)="deleteTask()">Delete</button>
     </span>
   </div>
 </div>

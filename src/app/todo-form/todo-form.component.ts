@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 
 @Component({
@@ -7,5 +7,16 @@ import {Component} from '@angular/core';
   styleUrls: ['./todo-form.component.css']
 })
 export class TodoFormComponent {
+  @Output()
+  onAddNewTask = new EventEmitter()
+
+  newTaskInput:string
+
+  addNewTask():void{
+    if(this.newTaskInput.trim()) {
+      this.onAddNewTask.emit(this.newTaskInput)
+      this.newTaskInput=''
+    }
+  }
 
 }

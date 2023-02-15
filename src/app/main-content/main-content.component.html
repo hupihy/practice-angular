@@ -22,7 +22,7 @@
             <hr/>
             <div class="user-nav">
               <div class="user-task-type-menu">
-                <button class="today-task">Active Task</button>
+                <button class="today-task">Today Tasks</button>
               </div>
               <div class="user-setting">
                 <button class="user-setting-button" (click)="displayUserSetting=!displayUserSetting">Setting</button>
@@ -31,9 +31,15 @@
           </div>
             <div class="task-container">
               <div class="title">Today create your best dreams</div>
-             <div class="task-form"> <app-todo-form class="new-task-input"></app-todo-form></div>
+             <div class="task-form"> <app-todo-form class="new-task-input" (onAddNewTask)="createNewTask($event)"></app-todo-form></div>
              <div class="tasks">
-               <app-todo class="task"></app-todo>
+               <app-todo class="task"
+                         *ngFor="let task of allTask "
+                         [task]="task"
+                         (onDeleteTask)="deleteTask($event)"
+                         (onFinishTask)="finishTask($event)"
+               >
+               </app-todo>
              </div>
             </div>
       </div>

@@ -81,10 +81,6 @@ hr{
   color: white;
   transition: .3s;
 }
-
-
-
-/* task style*/
 .task-container{
   display: flex;
   flex-direction: column;
@@ -117,7 +113,6 @@ hr{
   width: 500px;
   height: 600px;
   margin: 20px 0 10px 0;
-
 }
 .task{
   display: flex;

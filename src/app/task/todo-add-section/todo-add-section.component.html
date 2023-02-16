@@ -1,0 +1,29 @@
+<div class="setting">
+  <div class="setting-container">
+    <div class="title"><h1>Create new Selection</h1></div>
+    <div class="setting-forms-container">
+      <div class="new-section-name-container">Selection name<br>
+        <input
+          class="new-section-input"
+          type="text"
+          maxlength="10"
+          [(ngModel)]="newSectionName"
+        >
+      </div>
+      <div class="new-section-description-container">Selection description<br>
+        <input
+          class="new-description-input"
+          type="text"
+          maxlength="25"
+          [(ngModel)]="newSectionDescription"
+        >
+      </div>
+        </div>
+    <button class="finish-create-selection"
+            type="button"
+            (click)="CrateNewSelection()"
+    >Create!</button>
+  </div>
+</div>
+
+

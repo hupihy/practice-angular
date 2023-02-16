@@ -1,0 +1,49 @@
+.setting{
+  width: 100vw;
+  height: 100vh ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.setting-container{
+  width:400px;
+  height:400px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.setting-forms-container{
+  display: flex;
+  flex-direction: column;
+}
+.title{
+  margin: 20px 50px;
+}
+.new-section-name-container{
+  margin: 0 50px 20px 50px;
+}
+.new-section-input{
+  width: 300px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 30px;
+}
+.new-section-description-container{
+  margin: 0 50px 20px 50px;
+}
+.new-description-input{
+  width: 300px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 30px;
+}
+.finish-create-selection{
+  width: 300px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: #fc99ae;
+  cursor: pointer;
+  margin: 50px;
+}

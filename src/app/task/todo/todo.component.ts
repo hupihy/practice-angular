@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {TASK} from '../main-content/main-content.component'
+import {TASK} from '../../main-content/main-content.component'
 
 
 @Component({

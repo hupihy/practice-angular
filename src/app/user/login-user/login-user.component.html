@@ -20,6 +20,20 @@
           (keyup.enter)="finishSignUp()"
         >
         </div>
+      <div class="sex">
+        <input type="radio"
+               name="sex"
+               value="man"
+               [(ngModel)]="userSex"
+        >
+        <label>Man</label>
+        <input type="radio"
+               name="sex"
+               value="woman"
+               [(ngModel)]="userSex"
+        >
+        <label>Woman</label>
+      </div>
       <button class="finish-login-button" type="submit" (click)="finishSignUp()">Lets start!</button>
     </div>
   </div>

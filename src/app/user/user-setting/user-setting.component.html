@@ -19,9 +19,21 @@
           [(ngModel)]="userSecondNameInput"
           (keyup.enter)="finishSetting()"
         >
+        <div class="sex">
+          <input type="radio"
+                 name="sex"
+                 value="man"
+                 [(ngModel)]="userSex"
+          >
+          <label>Man</label>
+          <input type="radio"
+                 name="sex"
+                 value="woman"
+                 [(ngModel)]="userSex"
+          >
+          <label>Woman</label>
       </div>
       <button class="finish-setting-button" type="submit" (click)="finishSetting()">Save!</button>
     </div>
   </div>
 </div>
-

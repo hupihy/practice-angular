@@ -11,13 +11,13 @@ export class UserSettingComponent {
 
   userFirstNameInput:string
   userSecondNameInput:string
+  userSex:string
   userInfo:string[]=[]
 
   finishSetting():void{
     if(this.userFirstNameInput.trim() && this.userSecondNameInput.trim()){
-      this.userInfo.push(this.userFirstNameInput,this.userSecondNameInput)
+      this.userInfo.push(this.userFirstNameInput,this.userSecondNameInput,this.userSex)
       this.onFinishSetting.emit(this.userInfo)
-      console.log(this.userInfo)
     }
   }
 }

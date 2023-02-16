@@ -1,6 +1,7 @@
-<app-login-user class="setting-container" (onFinishSingUp)="finishSignUp($event)" *ngIf="!loginStatus"></app-login-user>
+<app-login-user  *ngIf="!loginStatus" class="setting-container" (onFinishSingUp)="finishSignUp($event)"></app-login-user>
 <app-user-setting *ngIf="displayUserSetting" (onFinishSetting)="finishSetting($event)"></app-user-setting>
-<div *ngIf="loginStatus && !displayUserSetting">
+<app-todo-add-section *ngIf="createNewSection" (onAddNewSelection)="createNewSelection($event)"></app-todo-add-section>
+<div *ngIf="loginStatus && !displayUserSetting && !createNewSection">
   <div class="background">
     <div class="circle-container" >
       <div class="background-circle"></div>
@@ -11,7 +12,7 @@
         <div class="main-content">
           <div class="user-profile">
            <div class="user-info"> <div class="user-ico">
-              <img class="user-ico"  src="/assets/default-ico.jpg" alt="undefined" >
+              <img class="user-ico"  src="{{userIco}}" alt="undefined" >
             </div>
           <div class="user-name">
               <span class="user-first-name">{{userFirstName | titlecase}}</span>
@@ -22,7 +23,14 @@
             <hr/>
             <div class="user-nav">
               <div class="user-task-type-menu">
-                <button class="today-task">Today Tasks</button>
+                <div class="selections">
+                <button class="selection"
+                        *ngFor=" let section of allSelection"
+                        [name]="section"
+                        (click)="viewTasks(section)"
+                >{{section.name| titlecase}}</button>
+              </div>
+                <button class="create-new-section" (click)="createNewSection=!createNewSection">Add new section</button>
               </div>
               <div class="user-setting">
                 <button class="user-setting-button" (click)="displayUserSetting=!displayUserSetting">Setting</button>
@@ -30,11 +38,12 @@
             </div>
           </div>
             <div class="task-container">
-              <div class="title">Today create your best dreams</div>
+              <div class="title"
+              >{{selectionDescriptionNow}}</div>
              <div class="task-form"> <app-todo-form class="new-task-input" (onAddNewTask)="createNewTask($event)"></app-todo-form></div>
              <div class="tasks">
                <app-todo class="task"
-                         *ngFor="let task of allTask "
+                         *ngFor="let task of visibleTask "
                          [task]="task"
                          (onDeleteTask)="deleteTask($event)"
                          (onFinishTask)="finishTask($event)"

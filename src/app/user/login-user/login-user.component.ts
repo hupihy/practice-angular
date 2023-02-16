@@ -13,11 +13,12 @@ export class LoginUserComponent {
 
   userFirstNameInput:string
   userSecondNameInput:string
+  userSex:string
 
   userInfo:string[]=[]
   finishSignUp():void {
     if(this.userFirstNameInput.trim() && this.userSecondNameInput.trim()){
-      this.userInfo.push(this.userFirstNameInput,this.userSecondNameInput)
+      this.userInfo.push(this.userFirstNameInput,this.userSecondNameInput, this.userSex)
       this.onFinishSingUp.emit(this.userInfo)
     }
   }

@@ -1,0 +1,72 @@
+<div class="background">
+  <div class="circle-container">
+    <div class="background-circle"></div>
+  </div>
+</div>
+<div class="todo-app">
+  <div class="todo-container">
+    <div class="todo-content">
+      <div class="user-profile">
+        <div class="user-info">
+          <div class="user-icon">
+            <img class="user-icon" src="assets/default-ico.jpg" alt="undefined">
+          </div>
+          <div class="user-name">
+            <span class="user-first-name">{{SingUpService.newUser.userFirstName}}</span>
+            <br>
+            <span class="user-last-name">{{SingUpService.newUser.userSecondName}}</span>
+          </div>
+        </div>
+        <hr/>
+        <div class="user-nav">
+          <div class="user-task-type-menu">
+            <div class="selections"
+                 *ngFor="let section of TodoAppService.allSection"
+            >
+              <button class="selection" (click)="TodoAppService.selectSection(section)">{{section.name}}</button>
+            </div>
+            <button class="create-new-section"
+                    routerLink="/newChapter"
+            >Add new section
+            </button>
+          </div>
+          <div class="user-setting">
+            <button class="user-setting-button"
+                    routerLink="/setting"
+            >
+              Setting
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="task-container">
+        <div class="titles"
+        >{{TodoAppService.sectionNow.description}}</div>
+        <div class="task-form">
+          <input
+            class="create-new-task"
+            type="text"
+            placeholder="create new Task"
+            [(ngModel)]="newTaskInput"
+            (keyup.enter)="createNewTask()"
+          >
+        </div>
+        <div class="task"
+             *ngFor=" let task of TodoAppService.visibleTask"
+        >
+          <span class="text"
+                [ngClass]="{
+                'finished':task.isDone
+                }"
+
+          >{{task.taskText}}</span>
+          <div><span class="task-buttons">
+            <button [disabled]="task.isDone" (click)="task.isDone = true">завершить</button>
+            <button (click)="TodoAppService.deleteTask(task)">удалить</button>
+          </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-.content{
+.todo-app{
   position: relative;
   display: flex;
   justify-content: center;
@@ -6,14 +6,14 @@
   height: 100vh;
   margin-right: 150px
 }
-.main-container{
+.todo-container{
   border: 6px solid white;
   background-color: #987dfe;
   border-radius: 20px;
   height: 500px;
   width: 900px;
 }
-.main-content{
+.todo-content{
   display: flex;
 }
 .user-profile{
@@ -31,7 +31,7 @@
   background-color: #fff;
   margin: 10px;
 }
-.user-ico{
+.user-icon{
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -189,4 +189,7 @@ hr{
   height: 300px;
   border-radius: 50%;
   background-color: #fc99ae;
+}
+.finished{
+  text-decoration: line-through;
 }

@@ -1,0 +1,56 @@
+<div class="setting">
+  <div class="setting-container">
+    <div class="title"><h1>Setting</h1></div>
+    <div class="setting-forms-container">
+      <form [formGroup]="saveUserForm" (ngSubmit)="saveUser()">
+        <div class="input-first-name">First name<br>
+          <input
+            class="user-first-name-input"
+            type="text"
+            formControlName="firstName"
+          >
+          <div class="validation"
+               *ngIf="saveUserForm.get('firstName').invalid && saveUserForm.get('firstName').touched"
+          >
+            <small>длина должна быть больше 4</small>
+          </div>
+        </div>
+        <div class="input-second-name">Second name<br>
+          <input
+            class="user-second-name-input"
+            type="text"
+            maxlength="10"
+            formControlName="secondName"
+          >
+          <div
+            class="validation"
+            *ngIf="saveUserForm.get('secondName').invalid && saveUserForm.get('secondName').touched"
+          >
+            <small>длина должна быть больше 4</small>
+          </div>
+        </div>
+        <div class="sex">
+          <input type="radio"
+                 name="sex"
+                 value="man"
+                 formControlName="userSex"
+          >
+          <label>Man</label>
+          <input type="radio"
+                 name="sex"
+                 value="woman"
+                 formControlName="userSex"
+          >
+          <label>Woman</label>
+        </div>
+        <button class="finish-setting-button"
+                type="submit"
+                [disabled]="saveUserForm.invalid"
+                (click)="saveUser()"
+        >Save!
+        </button>
+      </form>
+      </div>
+    </div>
+  </div>
+

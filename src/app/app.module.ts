@@ -1,40 +1,41 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {Routes, RouterModule} from "@angular/router";
 
-import { AppComponent } from './app.component';
-import { TodoFormComponent } from './task/todo-form/todo-form.component';
-import { TodoComponent } from './task/todo/todo.component';
-import {FormsModule} from "@angular/forms";
-import { MainContentComponent } from './main-content/main-content.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AppComponent} from './app.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgOptimizedImage} from "@angular/common";
-import { LoginUserComponent } from './user/login-user/login-user.component';
-import { UserSettingComponent } from './user/user-setting/user-setting.component';
-import { TodoAddSectionComponent } from './task/todo-add-section/todo-add-section.component';
+import {TodoAppComponent} from './todo-app/todo-app.component';
+import {UserSingUpComponent} from './user-sing-up/user-sing-up.component';
+import { SettingComponent } from './setting/setting.component';
+import { NewSectionComponent } from './new-chapter/new-section.component';
 
-
-
-
+const appRoutes: Routes = [
+  {path: '', component: UserSingUpComponent},
+  {path: 'todoApp', component: TodoAppComponent},
+  {path:'setting', component:SettingComponent},
+  {path:'newChapter', component:NewSectionComponent},
+]
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoFormComponent,
-    TodoComponent,
-    MainContentComponent,
-    LoginUserComponent,
-    UserSettingComponent,
-    TodoAddSectionComponent,
-
+    TodoAppComponent,
+    UserSingUpComponent,
+    SettingComponent,
+    NewSectionComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
     NgOptimizedImage,
-
+    RouterModule.forRoot(appRoutes),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

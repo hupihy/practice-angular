@@ -1,0 +1,57 @@
+<div class="sign-up">
+  <div class="sign-up-container">
+    <div class="title"><h1>SIGN UP</h1></div>
+    <div class="sing-up-forms-container">
+      <form [formGroup]="newUserForm" (ngSubmit)="createNewUser()">
+        <div class="input-first-name">First name<br>
+          <input
+            class="user-first-name-input"
+            type="text"
+            formControlName="firstName"
+          >
+          <div class="validation"
+               *ngIf="newUserForm.get('firstName').invalid && newUserForm.get('firstName').touched"
+          >
+            <small>длина должна быть больше 4</small>
+          </div>
+        </div>
+        <div class="input-second-name">Second name<br>
+          <input
+            class="user-second-name-input"
+            type="text"
+            maxlength="10"
+            formControlName="secondName"
+          >
+          <div
+            class="validation"
+            *ngIf="newUserForm.get('secondName').invalid && newUserForm.get('secondName').touched"
+          >
+            <small>длина должна быть больше 4</small>
+          </div>
+        </div>
+        <div class="sex">
+          <input type="radio"
+                 name="sex"
+
+                 value="man"
+                 formControlName="userSex"
+          >
+          <label>Man</label>
+          <input type="radio"
+                 name="sex"
+
+                 value="woman"
+                 formControlName="userSex"
+          >
+          <label>Woman</label>
+        </div>
+        <button class="finish-sign-up-button"
+                type="submit"
+                [disabled]="newUserForm.invalid"
+                (click)="createNewUser()"
+        >Lets start!
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

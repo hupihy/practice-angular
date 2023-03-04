@@ -1,0 +1,30 @@
+<div class="chapter">
+  <div class="chapter-container">
+    <form [formGroup]="newSectionForm" (ngSubmit)="createNewSection()">
+      <div class="title"><h1>Create new Selection</h1></div>
+      <div class="chapter-forms-container">
+        <div class="new-chapter-name-container">Selection name<br>
+          <input
+            class="new-chapter-input"
+            type="text"
+            maxlength="10"
+            formControlName="name"
+          >
+        </div>
+        <div class="new-chapter-description-container">Selection description<br>
+          <input
+            class="new-description-input"
+            type="text"
+            formControlName="description"
+          >
+        </div>
+      </div>
+      <button class="finish-create-chapter"
+              type="submit"
+              routerLink="/todoApp"
+              [disabled]="newSectionForm.invalid"
+      >Create!
+      </button>
+    </form>
+  </div>
+</div>

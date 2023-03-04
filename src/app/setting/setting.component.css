@@ -43,10 +43,12 @@
   height: 40px;
   border: none;
   border-radius: 20px;
+  margin-left:50px;
   background-color: #fc99ae;
   cursor: pointer;
 }
 .sex{
   margin-top: 20px;
   margin-bottom: 20px;
+  margin-left:50px;
 }
